@@ -4,7 +4,7 @@ Repository ini berisi kumpulan tugas, latihan, dan hasil praktikum **Pemrograman
 
 Repository disusun berdasarkan minggu/pertemuan agar source code dan laporan tugas lebih mudah dipelajari dan dikelola.
 
-## 📁 Struktur Repository
+## Struktur Repository
 
 ```text
 Java/
@@ -36,7 +36,7 @@ Java/
 └── README.md
 ```
 
-## 📚 Materi
+## Materi
 
 Repository ini mencakup materi dan latihan Java yang dipelajari selama beberapa minggu, antara lain:
 
@@ -55,7 +55,7 @@ Repository ini mencakup materi dan latihan Java yang dipelajari selama beberapa 
 
 > Materi dapat bertambah sesuai dengan pertemuan dan tugas yang diberikan selama perkuliahan.
 
-## 🗂️ Isi Setiap Folder
+## Isi Setiap Folder
 
 Setiap folder `minggu1` sampai `minggu6` berisi source code dan file pendukung sesuai dengan materi atau tugas pada minggu tersebut.
 
@@ -68,14 +68,14 @@ Masing-masing folder memiliki `README.md` untuk memberikan penjelasan lebih spes
 * Contoh input dan output
 * Dokumentasi atau screenshot jika diperlukan
 
-## 💻 Teknologi
+## Teknologi
 
 * **Bahasa:** Java
 * **Version Control:** Git
 * **Repository:** GitHub
 * **IDE:** Visual Studio Code / IDE Java lainnya
 
-## 🎯 Tujuan Repository
+## Tujuan Repository
 
 Repository ini dibuat sebagai:
 
@@ -85,10 +85,11 @@ Repository ini dibuat sebagai:
 4. Portfolio pembelajaran dasar pemrograman.
 5. Referensi untuk memahami kembali materi yang telah dipelajari.
 
-## 👨‍💻 Author
+## Author
 
-**Nama:** Wisnu
-**Program Studi:** Teknik Informatika
+**Nama:** Mohammad Wisnu
+**NIM:** 264107020193
+**Kelas:** TI - 1I
 **Politeknik Negeri Malang**
 **Tahun Akademik:** 2026/2027
 
