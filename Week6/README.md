@@ -3,7 +3,7 @@
 **Identitas Mahasiswa:**
 - **Nama:** Mohammad Wisnu
 - **NIM:** 264107020193
-- **Kelas / No. Presensi:** TI 1I / [isi nomor presensi]
+- **Kelas / No. Presensi:** TI 1I / [20]
 
 ---
 
@@ -27,7 +27,7 @@ Program memeriksa apakah mahasiswa telah menyelesaikan semua tanggungan penalti.
 
 #### 2.1.1 Kode Program Java
 
-Kode lengkap tersedia di [`src/week6/NestedThesisExamAttendance20.java`](week6/NestedThesisExamAttendance20.java).
+Kode lengkap tersedia di [`Week6/NestedThesisExamAttendance20.java`](/Week6/NestedThesisExamAttendance20.java).
 
 ```java
 import java.util.Scanner;
@@ -75,11 +75,7 @@ public class NestedThesisExamAttendance20 {
 
 #### 2.1.3 Hasil Running / Screenshot Output
 
-Simpan screenshot hasil program di folder `images/`, lalu gunakan format berikut agar gambar tampil di GitHub:
-
-![Output Percobaan 1](images/experiment-1-output.png)
-
-> **Catatan:** Gambar output belum disertakan. Ganti atau tambahkan `images/experiment-1-output.png` dengan screenshot asli setelah program dijalankan.
+![Output Percobaan 1](/Week6/images/experiment-1-output.png)
 
 #### 2.1.4 Jawaban Pertanyaan
 
@@ -100,7 +96,7 @@ Program memberikan akses Wi-Fi jika pengguna merupakan mahasiswa atau dosen dan 
 
 #### 2.2.1 Kode Program Java
 
-Kode lengkap tersedia di [`src/week6/LogicalOperatorWifi20.java`](src/week6/LogicalOperatorWifi20.java).
+Kode lengkap tersedia di [`Week6/LogicalOperatorWifi20.java`](/Week6/LogicalOperatorWifi20.java).
 
 ```java
 import java.util.Scanner;
@@ -150,9 +146,7 @@ Ekspresi `(isStudent || isLecturer) && !isBlocked` berarti pengguna harus bersta
 
 #### 2.2.4 Hasil Running / Screenshot Output
 
-![Output Percobaan 2](images/experiment-2-output.png)
-
-> **Catatan:** Tambahkan screenshot asli program ke `images/experiment-2-output.png`.
+![Output Percobaan 2](/Week6/images/experiment-2-output.png.png)
 
 #### 2.2.5 Jawaban Pertanyaan
 
@@ -176,7 +170,7 @@ Program memberikan akses laboratorium apabila pengguna adalah mahasiswa aktif, t
 
 #### 2.3.1 Kode Program Java
 
-Kode lengkap tersedia di [`src/week6/NestedLabAccess20.java`](src/week6/NestedLabAccess20.java).
+Kode lengkap tersedia di [`Week6/NestedLabAccess20.java`](Week6/NestedLabAccess20.java).
 
 ```java
 import java.util.Scanner;
@@ -236,9 +230,7 @@ public class NestedLabAccess20 {
 
 #### 2.3.4 Hasil Running / Screenshot Output
 
-![Output Percobaan 3](images/experiment-3-output.png)
-
-> **Catatan:** Tambahkan screenshot asli program ke `images/experiment-3-output.png`.
+![Output Percobaan 3](/Week6/images/experiment-3-output.png.png)
 
 #### 2.3.5 Jawaban Pertanyaan
 
@@ -265,7 +257,7 @@ Dua file tugas berikut disertakan berdasarkan source code yang tersedia.
 
 ### 3.1 Tugas 1 — Diskon Toko Buku dengan Nested If
 
-Program menghitung diskon berdasarkan jenis buku dan jumlah buku yang dibeli. Kode lengkap: [`src/week6/Task1Jobsheet6.java`](src/week6/Task1Jobsheet6.java).
+Program menghitung diskon berdasarkan jenis buku dan jumlah buku yang dibeli. Kode lengkap: [`Week6/Task1Jobsheet6.java`](/Week6/Task1Jobsheet6.java).
 
 Aturan yang diterapkan oleh kode:
 - **Dictionary:** diskon 10%; tambahan 2% jika jumlah lebih dari 2.
@@ -275,13 +267,11 @@ Aturan yang diterapkan oleh kode:
 
 #### Hasil Running / Screenshot Output
 
-![Output Tugas 1](images/task-1-output.png)
-
-> Tambahkan screenshot asli ke `images/task-1-output.png`.
+![Output Tugas 1](/Week6/images/task-1-output.png.png)
 
 ### 3.2 Tugas 2 — Seleksi Kandidat Asisten Laboratorium
 
-Program memeriksa status mahasiswa, sanksi akademik, nilai Dasar Pemrograman atau sertifikat kompetensi, lalu nilai wawancara. Kode lengkap: [`src/week6/Task2AssistantSelection20.java`](src/week6/Task2AssistantSelection20.java).
+Program memeriksa status mahasiswa, sanksi akademik, nilai Dasar Pemrograman atau sertifikat kompetensi, lalu nilai wawancara. Kode lengkap: [`/Week6/Task2AssistantSelection20.java`](/Week6/Task2AssistantSelection20.java).
 
 Ringkasan aturan dari kode:
 1. Mahasiswa harus aktif dan tidak sedang terkena sanksi akademik.
@@ -291,9 +281,7 @@ Ringkasan aturan dari kode:
 
 #### Hasil Running / Screenshot Output
 
-![Output Tugas 2](images/task-2-output.png)
-
-> Tambahkan screenshot asli ke `images/task-2-output.png`.
+![Output Tugas 2](/Week6/images/task-2-output.png)
 
 ---
 
@@ -321,4 +309,4 @@ Week6/
 └── Task2AssistantSelection20.java
 ```
 
-**Catatan GitHub:** gambar akan tampil jika file gambar benar-benar ada di lokasi yang dirujuk oleh Markdown. Simpan screenshot output ke folder `images/` dengan nama yang sesuai. Source code Java berada di `src/week6/`.
+**Catatan GitHub:** gambar akan tampil jika file gambar benar-benar ada di lokasi yang dirujuk oleh Markdown. Simpan screenshot output ke folder `images/` dengan nama yang sesuai. Source code Java berada di `Week6/`.
