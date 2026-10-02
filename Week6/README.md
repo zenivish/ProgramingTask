@@ -27,7 +27,7 @@ Program memeriksa apakah mahasiswa telah menyelesaikan semua tanggungan penalti.
 
 #### 2.1.1 Kode Program Java
 
-Kode lengkap tersedia di [`src/week6/NestedThesisExamAttendance20.java`](src/week6/NestedThesisExamAttendance20.java).
+Kode lengkap tersedia di [`src/week6/NestedThesisExamAttendance20.java`](week6/NestedThesisExamAttendance20.java).
 
 ```java
 import java.util.Scanner;
@@ -306,7 +306,7 @@ Operator logika `&&`, `||`, dan `!` membantu menggabungkan serta membalik kondis
 ## 5. STRUKTUR FOLDER REPOSITORY
 
 ```text
-Jobsheet5_GitHub/
+Week6/
 ├── README.md
 ├── images/
 │   ├── experiment-1-output.png
@@ -314,13 +314,11 @@ Jobsheet5_GitHub/
 │   ├── experiment-3-output.png
 │   ├── task-1-output.png
 │   └── task-2-output.png
-└── src/
-    └── week6/
-        ├── LogicalOperatorWifi20.java
-        ├── NestedLabAccess20.java
-        ├── NestedThesisExamAttendance20.java
-        ├── Task1Jobsheet6.java
-        └── Task2AssistantSelection20.java
+├── LogicalOperatorWifi20.java
+├── NestedLabAccess20.java
+├── NestedThesisExamAttendance20.java
+├── Task1Jobsheet6.java
+└── Task2AssistantSelection20.java
 ```
 
 **Catatan GitHub:** gambar akan tampil jika file gambar benar-benar ada di lokasi yang dirujuk oleh Markdown. Simpan screenshot output ke folder `images/` dengan nama yang sesuai. Source code Java berada di `src/week6/`.
