@@ -199,7 +199,7 @@ Struktur `if-else if` memungkinkan program memeriksa beberapa kondisi secara ber
 Untuk kasus pemilihan semester seperti pada program ini, `switch-case` lebih mudah dibaca karena kondisi yang diperiksa merupakan nilai diskrit dari satu variabel. Pada `if-else if`, pengecekan seperti `semester == 1`, `semester == 2`, dan seterusnya harus ditulis secara berulang.
 
 #### 2.3.3 Hasil Running / Screenshot Output
-![Output Percobaan 3].(Week5/images/image3.png).
+![Output Percobaan 3](Week5/images/image3.png)
 
 ---
 
