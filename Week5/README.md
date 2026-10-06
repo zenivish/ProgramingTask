@@ -50,6 +50,7 @@ public class PemilihanIf20 {
 ```
 
 #### 2.1.2 Hasil Running / Screenshot Output
+(/Week5/images/image1.png)
 
 #### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 
@@ -145,6 +146,7 @@ Berikut adalah hasil pengujian program menggunakan beberapa variasi input:
   **Jawab:** Tidak. `switch` tidak dapat menggunakan `double` atau `float` sebagai selector. Beberapa tipe data yang dapat digunakan antara lain `byte`, `short`, `char`, `int`, `String`, `enum`, serta wrapper dari tipe-tipe tersebut.
 
 #### 2.2.4 Hasil Running / Screenshot Output
+(/Week5/images/image2.png)
 
 ---
 
@@ -197,6 +199,7 @@ Struktur `if-else if` memungkinkan program memeriksa beberapa kondisi secara ber
 Untuk kasus pemilihan semester seperti pada program ini, `switch-case` lebih mudah dibaca karena kondisi yang diperiksa merupakan nilai diskrit dari satu variabel. Pada `if-else if`, pengecekan seperti `semester == 1`, `semester == 2`, dan seterusnya harus ditulis secara berulang.
 
 #### 2.3.3 Hasil Running / Screenshot Output
+(Week5/images/image3.png)
 
 ---
 
