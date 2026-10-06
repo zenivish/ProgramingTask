@@ -75,7 +75,7 @@ public class NestedThesisExamAttendance20 {
 
 #### 2.1.3 Hasil Running / Screenshot Output
 
-![Output Percobaan 1](/Week6/images/experiment-1-output.png)
+![Output Percobaan 1](/Week6/images/experiment-1-output.png.png)
 
 #### 2.1.4 Jawaban Pertanyaan
 
