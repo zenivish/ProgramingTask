@@ -50,7 +50,7 @@ public class PemilihanIf20 {
 ```
 
 #### 2.1.2 Hasil Running / Screenshot Output
-(/Week5/images/image1.png)
+![Output Percobaan 1](/Week5/images/image1.png)
 
 #### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 
@@ -146,7 +146,7 @@ Berikut adalah hasil pengujian program menggunakan beberapa variasi input:
   **Jawab:** Tidak. `switch` tidak dapat menggunakan `double` atau `float` sebagai selector. Beberapa tipe data yang dapat digunakan antara lain `byte`, `short`, `char`, `int`, `String`, `enum`, serta wrapper dari tipe-tipe tersebut.
 
 #### 2.2.4 Hasil Running / Screenshot Output
-(/Week5/images/image2.png)
+![Output Percobaan 2](/Week5/images/image2.png)
 
 ---
 
@@ -199,7 +199,7 @@ Struktur `if-else if` memungkinkan program memeriksa beberapa kondisi secara ber
 Untuk kasus pemilihan semester seperti pada program ini, `switch-case` lebih mudah dibaca karena kondisi yang diperiksa merupakan nilai diskrit dari satu variabel. Pada `if-else if`, pengecekan seperti `semester == 1`, `semester == 2`, dan seterusnya harus ditulis secara berulang.
 
 #### 2.3.3 Hasil Running / Screenshot Output
-![Output Percobaan 3](Week5/images/image3.png)
+![Output Percobaan 3](/Week5/images/image3.png)
 
 ---
 
@@ -244,6 +244,7 @@ Pada program ini, apabila `UKTLunas` bernilai `true`, variabel `pesan` akan beri
 Operator ternary cocok digunakan untuk kondisi sederhana. Untuk kondisi yang lebih kompleks atau memiliki banyak percabangan, penggunaan `if-else` biasanya lebih mudah dibaca.
 
 #### 2.4.3 Hasil Running / Screenshot Output
+![Output Percobaan 4](/Week5/images/image4.png)
 
 ---
 
@@ -287,6 +288,7 @@ public class Tugas2Pemilihan20 {
 ```
 
 #### 3.1.2 Hasil Running / Screenshot Output
+![Output Tugas 1](/Week5/images/image5.png)
 
 #### 3.1.3 Analisis
 
@@ -333,6 +335,7 @@ public class TugasParkir20 {
 ```
 
 #### 3.2.2 Hasil Running / Screenshot Output
+![Output Tugas 2](/Week5/images/image6.png)
 
 #### 3.2.3 Analisis
 
@@ -390,6 +393,7 @@ public class TugasAntrean20 {
 ```
 
 #### 3.3.2 Hasil Running / Screenshot Output
+![Output Tugas 3](/Week5/images/image7.png)
 
 #### 3.3.3 Analisis
 
