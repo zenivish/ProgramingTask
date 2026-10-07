@@ -281,7 +281,7 @@ Ringkasan aturan dari kode:
 
 #### Hasil Running / Screenshot Output
 
-![Output Tugas 2](/Week6/images/task-2-output.png)
+![Output Tugas 2](/Week6/images/task-2-output.png.png)
 
 ---
 
@@ -307,6 +307,3 @@ Week6/
 ├── NestedThesisExamAttendance20.java
 ├── Task1Jobsheet6.java
 └── Task2AssistantSelection20.java
-```
-
-**Catatan GitHub:** gambar akan tampil jika file gambar benar-benar ada di lokasi yang dirujuk oleh Markdown. Simpan screenshot output ke folder `images/` dengan nama yang sesuai. Source code Java berada di `Week6/`.
