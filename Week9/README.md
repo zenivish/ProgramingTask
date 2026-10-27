@@ -27,7 +27,33 @@ This experiment covers the use of a `for` loop and value processing to determine
 #### 2.1.1 Java Program Code
 
 ```java
-// Insert the Experiment 1 program code from the jobsheet here.
+package week9;
+import java.util.Scanner;
+public class SiakadFor20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+
+        Double score, highest = 0.0, lowest = 100.0;
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Enter score for student " + i + ": ");
+            score = sc.nextDouble();
+
+            if (score > highest) {
+                highest = score;
+            }
+            if (score < lowest) {
+                lowest = score;
+            }
+        }
+
+        System.out.println("Highest score: " + highest);
+        System.out.println("Lowest score: " + lowest);
+
+        sc.close();
+    }    
+}
+
 ```
 
 #### 2.1.2 Program Output / Screenshot
@@ -48,7 +74,7 @@ The following is the program output after execution:
   * **Answer:** The program compares each new value with `highest` and `lowest`. If the new value is greater than `highest`, the `highest` value is updated. If the new value is less than `lowest`, the `lowest` value is updated.
 
 * **Question 4:** What should be done for the modified program?
-  * **Answer:** Insert the modified program code and its output screenshot in the program code and output sections above.
+  * **Answer:** .
 
 ---
 
@@ -59,7 +85,46 @@ This experiment covers value validation and the use of `continue`. If a value is
 #### 2.2.1 Java Program Code
 
 ```java
-// Insert the Experiment 2 program code from the jobsheet here.
+package week9;
+import java.util.Scanner;
+public class SiakadWhile20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int score, studentCount, i = 0;
+
+        System.out.print("Input your student number :");
+        studentCount = sc.nextInt();
+
+        while (i < studentCount) {
+            System.out.print("Enter score for student " + (i + 1) + " :" );
+            score = sc.nextInt();
+
+            if (score < 0 || score > 100) {
+                System.out.println("Invalid score. Please enter a valid score!");
+                continue;
+            }
+            if (score > 80 && score <= 100) {
+                System.out.println("The grade of student " + (i + 1) + " is A");
+                } else if (score > 73 && score <= 80) {
+                    System.out.println("The grade of student " + (i + 1) + " is B+");
+                } else if (score > 65 && score <= 73) {
+                    System.out.println("The grade of student " + (i + 1) + " is B");
+                } else if (score > 60 && score <= 65) {
+                    System.out.println("The grade of student " + (i + 1) + " is C+");
+                } else if (score > 50 && score <= 60) {
+                    System.out.println("The grade of student " + (i + 1) + " is C");
+                } else if (score > 39 && score <= 50) {
+                    System.out.println("The grade of student " + (i + 1) + " is D");
+                } else {
+                    System.out.println("The grade of student " + (i + 1) + " is E");
+            }
+             i++;
+        }
+        sc.close();
+    }
+}
+
 ```
 
 #### 2.2.2 Program Output / Screenshot
@@ -96,7 +161,41 @@ This experiment covers a loop that accepts customer names and stops when the use
 #### 2.3.1 Java Program Code
 
 ```java
-// Insert the Experiment 3 program code from the jobsheet here.
+package week9;
+import java.util.Scanner;
+public class CafeDoWhile20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int coffee, tea, bread, totalPrice;
+        int coffeePrice = 12000, teaPrice = 7000, breadPrice = 20000;
+        String customerName;
+
+        do {
+            System.out.print("Enter customer name (type 'cancel' to exit): ");
+            customerName = sc.nextLine();
+            if (customerName.equalsIgnoreCase("cancel")) {
+                System.out.println("Transaction canceled.");
+                break;
+            } 
+            System.out.print("Coffee quantity: ");
+            coffee = sc.nextInt();
+            System.out.print("Tea quantity: ");
+            tea = sc.nextInt();
+            System.out.print("Bread quantity: ");
+            bread = sc.nextInt();
+
+            totalPrice = (coffee * coffeePrice) + (tea * teaPrice) + (bread * breadPrice);
+            System.out.println("Total amount to pay: Rp " + totalPrice);
+            sc.nextLine();
+        } while (true);
+        System.out.println("All transactions completed.");
+
+        sc.close();
+    }
+    
+}
+
 ```
 
 #### 2.3.2 Program Output / Screenshot
@@ -131,7 +230,53 @@ The following is the list of independent assignments for Jobsheet 7. Adjust the 
 ### 3.1 Assignment 1 Code Implementation
 
 ```java
-// Insert the Assignment 1 program code here.
+package week9;
+import java.util.Scanner;
+public class Assignment1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int ticketPrice = 50000;
+        int totalTicketSold = 0;
+        double totalRevenue = 0;
+
+        while (true) {
+            System.out.print("Enter number ticket purchased (type 0 to finish) :");
+            int quantity = sc.nextInt();
+
+            if (quantity ==  0) {
+                break;
+            }
+            if (quantity < 0) {
+                System.out.println("Invalid input number");
+            }
+
+            double subtotal = quantity*ticketPrice;
+            double discount = 0;
+
+            if (quantity > 4 ) {
+                discount = 0.1;    
+            } else if (quantity > 10) {
+                discount = 0.15;
+            }
+
+            double finalPrice = subtotal - (subtotal * discount);
+            totalTicketSold += quantity;
+            totalRevenue += finalPrice;
+
+            System.out.println("Subtotal after discount: Rp " + finalPrice);
+            System.out.println("----------------------------------------");
+        }
+
+        System.out.println("\n -- Today's Sales Report -- ");
+        System.out.println("Total tickets sold : " + totalTicketSold);
+        System.out.println("Total revenue      : Rp " + totalRevenue);
+        
+        sc.close();
+
+    }
+}
+
 ```
 
 #### 3.1.1 Program Output / Screenshot
@@ -141,7 +286,47 @@ The following is the list of independent assignments for Jobsheet 7. Adjust the 
 ### 3.2 Assignment 2 Code Implementation
 
 ```java
-// Insert the Assignment 2 program code here.
+package week9;
+import java.util.Scanner;
+public class Assignment2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+
+        int type, duration;
+        int total = 0;
+        
+        do {
+            System.out.println("\n--- Parking Menu ---");
+            System.out.println("1. Car (Rp 3,000 / hour)");
+            System.out.println("2. Motorcycle (Rp 2,000 / hour)");
+            System.out.println("0. Exit");
+            System.out.print("Enter vehicle type (1/2/0): ");
+            type = sc.nextInt();
+            
+            if (type == 0) {
+                break;
+            }
+            
+            if (type == 1 || type == 2) {
+                System.out.print("Enter parking duration (hours): ");
+                duration = sc.nextInt();
+                
+                if (type == 1) {
+                    total += duration * 3000;
+                } else {
+                    total += duration * 2000;
+                }
+            } else {
+                System.out.println("Invalid choice! Please choose 1, 2, or 0.");
+            }
+            
+        } while (type != 0);
+        
+        System.out.println("\nTotal overall parking fee: Rp " + total);
+        sc.close();
+    }
+}
+
 ```
 
 #### 3.2.1 Program Output / Screenshot
