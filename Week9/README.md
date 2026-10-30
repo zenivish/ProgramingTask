@@ -1,9 +1,10 @@
 # JOBSHEET 7 - LOOPS
 
 **Student Information:**
+
 * **Name:** Mohammad Wisnu
 * **Student ID:** 264107020193
-* **Class / Attendance No.:** TI 1I / [Attendance Number]
+* **Class / Attendance No.:** TI 1I / 20
 
 ---
 
@@ -75,7 +76,8 @@ The following is the program output after execution:
 
 * **Question 4:** What should be done for the modified program?
   * **Answer:**
-  ```java
+
+```java
 package week9;
 import java.util.Scanner;
 public class SiakadFor20Modifed {
@@ -196,7 +198,8 @@ The following is the program output after execution:
 
 * **Question 4:** What should be done for the modified program?
   * **Answer:**
-  ```java
+
+```java
 package week9;
 import java.util.Scanner;
 public class SiakadWhile20Modifed {
@@ -246,6 +249,7 @@ public class SiakadWhile20Modifed {
 The following is the program output after execution:
 
 ![Output Question 4](/ProgramingTask/week9/images/questionSC2.png)
+
 ---
 
 ### 2.3 Experiment 3: Using `do-while` and `break`
@@ -318,8 +322,8 @@ The following is the program output after execution:
 
 The following is the list of independent assignments for Jobsheet 7. Adjust the assignment titles and content according to the original jobsheet instructions.
 
-- [ ] **Assignment 1:** Cinema Ticket Sales Calculator.
-- [ ] **Assignment 2:** Parking Fee Calculator.
+**Assignment 1:** Cinema Ticket Sales Calculator.
+**Assignment 2:** Parking Fee Calculator.
 
 ### 3.1 Assignment 1 Code Implementation
 
@@ -375,7 +379,7 @@ public class Assignment1 {
 
 #### 3.1.1 Program Output / Screenshot
 
-![Output Tugas 1](/ProgramingTask/week9/images/assignment1.png)
+![Output Assignment 1](/ProgramingTask/week9/images/assignment1.png)
 
 ### 3.2 Assignment 2 Code Implementation
 
@@ -425,7 +429,7 @@ public class Assignment2 {
 
 #### 3.2.1 Program Output / Screenshot
 
-![Output Tugas 2](/ProgramingTask/week9/images/assignment2.png)
+![Output Assignment 2](/ProgramingTask/week9/images/assignment2.png)
 
 ---
 
