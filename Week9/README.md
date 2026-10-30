@@ -60,7 +60,7 @@ public class SiakadFor20 {
 
 The following is the program output after execution:
 
-![Output Percobaan 1](./gambar-percobaan-1.png)
+![Output Percobaan 1](/ProgramingTask/week9/images/SC1.png)
 
 #### 2.1.3 Answers to Questions / Reflection Questions
 
@@ -74,7 +74,49 @@ The following is the program output after execution:
   * **Answer:** The program compares each new value with `highest` and `lowest`. If the new value is greater than `highest`, the `highest` value is updated. If the new value is less than `lowest`, the `lowest` value is updated.
 
 * **Question 4:** What should be done for the modified program?
-  * **Answer:** .
+  * **Answer:**
+  ```java
+package week9;
+import java.util.Scanner;
+public class SiakadFor20Modifed {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double score, highest = 0.0, lowest = 100.0;
+        int passCount = 0;
+        int failCount = 0;
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Enter score for student " + i + ": ");
+            score = sc.nextDouble();
+            
+            if (score > highest) {
+                highest = score;
+            }
+            if (score < lowest) {
+                lowest = score;
+            }
+            
+            if (score >= 60) {
+                passCount++;
+            } else {
+                failCount++;
+            }
+        }
+        
+        System.out.println("Highest score: " + highest);
+        System.out.println("Lowest score: " + lowest);
+        System.out.println("Number of students who pass: " + passCount);
+        System.out.println("Number of students who fail: " + failCount);
+        
+        sc.close();
+    }
+}
+```
+
+The following is the program output after execution:
+
+![Output Question 4](/ProgramingTask/week9/images/questionSC1.png)
 
 ---
 
@@ -131,7 +173,7 @@ public class SiakadWhile20 {
 
 The following is the program output after execution:
 
-![Output Percobaan 2](./gambar-percobaan-2.png)
+![Output Percobaan 2](/ProgramingTask/week9/images/SC2.png)
 
 #### 2.2.3 Output Parameter Test Table
 
@@ -152,6 +194,58 @@ The following is the program output after execution:
 * **Question 3:** How many times does the loop process data for 19 students?
   * **Answer:** The program is intended to process 19 valid student score entries. Invalid scores skipped by `continue` are not counted as fully processed student entries. The actual number of iterations still depends on the program’s code structure.
 
+* **Question 4:** What should be done for the modified program?
+  * **Answer:**
+  ```java
+package week9;
+import java.util.Scanner;
+public class SiakadWhile20Modifed {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int score, studentCount, i = 0;
+        
+        System.out.print("Enter the number of students: ");
+        studentCount = sc.nextInt();
+        
+        while (i < studentCount) {
+            System.out.print("Enter score for student " + (i + 1) + ": ");
+            score = sc.nextInt();
+            
+            if (score < 0 || score > 100) {
+                System.out.println("Invalid score. Please enter a valid score!");
+                continue;
+            }
+            
+            if (score > 80 && score <= 100) {
+                System.out.println("The grade of student " + (i + 1) + " is A");
+                System.out.println("Well done, keep up the good work!");
+            } else if (score > 73 && score <= 80) {
+                System.out.println("The grade of student " + (i + 1) + " is B+");
+            } else if (score > 65 && score <= 73) {
+                System.out.println("The grade of student " + (i + 1) + " is B");
+            } else if (score > 60 && score <= 65) {
+                System.out.println("The grade of student " + (i + 1) + " is C+");
+            } else if (score > 50 && score <= 60) {
+                System.out.println("The grade of student " + (i + 1) + " is C");
+            } else if (score > 39 && score <= 50) {
+                System.out.println("The grade of student " + (i + 1) + " is D");
+            } else {
+                System.out.println("The grade of student " + (i + 1) + " is E");
+            }
+            
+            i++;
+        }
+        
+        sc.close();
+    }
+}
+
+```
+
+The following is the program output after execution:
+
+![Output Question 4](/ProgramingTask/week9/images/questionSC2.png)
 ---
 
 ### 2.3 Experiment 3: Using `do-while` and `break`
@@ -202,7 +296,7 @@ public class CafeDoWhile20 {
 
 The following is the program output after execution:
 
-![Output Percobaan 3](./gambar-percobaan-3.png)
+![Output Percobaan 3](/ProgramingTask/week9/images/SC3.png)
 
 #### 2.3.3 Answers to Questions / Reflection Questions
 
@@ -224,8 +318,8 @@ The following is the program output after execution:
 
 The following is the list of independent assignments for Jobsheet 7. Adjust the assignment titles and content according to the original jobsheet instructions.
 
-- [ ] **Assignment 1:** Insert the title and instructions for the first assignment.
-- [ ] **Assignment 2:** Insert the title and instructions for the second assignment.
+- [ ] **Assignment 1:** Cinema Ticket Sales Calculator.
+- [ ] **Assignment 2:** Parking Fee Calculator.
 
 ### 3.1 Assignment 1 Code Implementation
 
@@ -281,7 +375,7 @@ public class Assignment1 {
 
 #### 3.1.1 Program Output / Screenshot
 
-![Output Tugas 1](./gambar-tugas-1.png)
+![Output Tugas 1](/ProgramingTask/week9/images/assignment1.png)
 
 ### 3.2 Assignment 2 Code Implementation
 
@@ -331,7 +425,7 @@ public class Assignment2 {
 
 #### 3.2.1 Program Output / Screenshot
 
-![Output Tugas 2](./gambar-tugas-2.png)
+![Output Tugas 2](/ProgramingTask/week9/images/assignment2.png)
 
 ---
 
