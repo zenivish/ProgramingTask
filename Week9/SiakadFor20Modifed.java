@@ -1,4 +1,4 @@
-package week9;
+package Week9;
 import java.util.Scanner;
 public class SiakadFor20Modifed {
     public static void main(String[] args) {
