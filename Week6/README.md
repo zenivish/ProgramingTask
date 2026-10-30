@@ -1,6 +1,7 @@
 # JOBSHEET 5 — LOGICAL OPERATOR & NESTED IF
 
 **Identitas Mahasiswa:**
+
 - **Nama:** Mohammad Wisnu
 - **NIM:** 264107020193
 - **Kelas / No. Presensi:** TI 1I / [20]
@@ -12,6 +13,7 @@
 Praktikum ini membahas penggunaan operator logika dan struktur `nested if` pada Java untuk memeriksa beberapa persyaratan secara bertahap.
 
 Tujuan praktikum:
+
 1. Memahami operator logika `&&` (AND), `||` (OR), dan `!` (NOT).
 2. Mengimplementasikan operator logika dalam program Java.
 3. Memahami alur pemeriksaan kondisi bertingkat (*nested if*).
@@ -128,9 +130,9 @@ public class LogicalOperatorWifi20 {
 #### 2.2.2 Analisis Operator
 
 | Operator | Nama | Fungsi |
-|---|---|---|
+| --- | --- | --- |
 | `&&` | AND | Bernilai `true` jika kedua kondisi bernilai `true`. |
-| `||` | OR | Bernilai `true` jika minimal satu kondisi bernilai `true`. |
+| `II` | OR | Bernilai `true` jika minimal satu kondisi bernilai `true`. |
 | `!` | NOT | Membalik nilai boolean, misalnya `!isBlocked` bernilai `true` saat `isBlocked` bernilai `false`. |
 
 Ekspresi `(isStudent || isLecturer) && !isBlocked` berarti pengguna harus berstatus mahasiswa atau dosen, serta tidak sedang diblokir.
@@ -138,7 +140,7 @@ Ekspresi `(isStudent || isLecturer) && !isBlocked` berarti pengguna harus bersta
 #### 2.2.3 Tabel Pengujian
 
 | Mahasiswa | Dosen | Diblokir | Hasil yang diharapkan |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `true` | `false` | `false` | Wi-Fi diberikan |
 | `false` | `true` | `false` | Wi-Fi diberikan |
 | `true` | `true` | `true` | Akses ditolak |
@@ -221,7 +223,7 @@ public class NestedLabAccess20 {
 #### 2.3.3 Tabel Pengujian
 
 | Mahasiswa aktif | Terkena sanksi | Izin dosen | Asisten lab | Hasil |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | `true` | `false` | `true` | `false` | Akses diberikan |
 | `true` | `false` | `false` | `true` | Akses diberikan |
 | `true` | `false` | `false` | `false` | Akses ditolak: izin/asisten tidak terpenuhi |
@@ -260,6 +262,7 @@ Dua file tugas berikut disertakan berdasarkan source code yang tersedia.
 Program menghitung diskon berdasarkan jenis buku dan jumlah buku yang dibeli. Kode lengkap: [`Week6/Task1Jobsheet6.java`](/Week6/Task1Jobsheet6.java).
 
 Aturan yang diterapkan oleh kode:
+
 - **Dictionary:** diskon 10%; tambahan 2% jika jumlah lebih dari 2.
 - **Novel:** diskon 7%; tambahan 2% jika jumlah lebih dari 3, atau tambahan 1% jika jumlah 3 atau kurang.
 - **Jenis lainnya:** diskon 5% jika jumlah lebih dari 3; selain itu tidak ada diskon.
@@ -274,12 +277,13 @@ Aturan yang diterapkan oleh kode:
 Program memeriksa status mahasiswa, sanksi akademik, nilai Dasar Pemrograman atau sertifikat kompetensi, lalu nilai wawancara. Kode lengkap: [`/Week6/Task2AssistantSelection20.java`](/Week6/Task2AssistantSelection20.java).
 
 Ringkasan aturan dari kode:
+
 1. Mahasiswa harus aktif dan tidak sedang terkena sanksi akademik.
 2. Nilai Dasar Pemrograman minimal 80 **atau** memiliki sertifikat kompetensi pemrograman.
 3. Jika memenuhi persyaratan tersebut, mahasiswa dipanggil wawancara.
 4. Kandidat diterima sebagai asisten jika nilai wawancara minimal 75.
 
-#### Hasil Running / Screenshot Output
+#### Hasil Running / Output
 
 ![Output Tugas 2](/Week6/images/task-2-output.png.png)
 
@@ -288,22 +292,3 @@ Ringkasan aturan dari kode:
 ## 4. KESIMPULAN
 
 Operator logika `&&`, `||`, dan `!` membantu menggabungkan serta membalik kondisi boolean dalam program Java. Struktur `nested if` memungkinkan pemeriksaan dilakukan secara bertahap, sehingga program dapat menentukan keputusan berdasarkan beberapa persyaratan dan menampilkan pesan yang sesuai dengan kondisi yang terpenuhi atau gagal.
-
----
-
-## 5. STRUKTUR FOLDER REPOSITORY
-
-```text
-Week6/
-├── README.md
-├── images/
-│   ├── experiment-1-output.png
-│   ├── experiment-2-output.png
-│   ├── experiment-3-output.png
-│   ├── task-1-output.png
-│   └── task-2-output.png
-├── LogicalOperatorWifi20.java
-├── NestedLabAccess20.java
-├── NestedThesisExamAttendance20.java
-├── Task1Jobsheet6.java
-└── Task2AssistantSelection20.java

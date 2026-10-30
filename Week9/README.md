@@ -61,7 +61,7 @@ public class SiakadFor20 {
 
 The following is the program output after execution:
 
-![Output Percobaan 1](/ProgramingTask/week9/images/SC1.png)
+![Output Percobaan 1](/week9/images/SC1.png)
 
 #### 2.1.3 Answers to Questions / Reflection Questions
 
@@ -118,7 +118,7 @@ public class SiakadFor20Modifed {
 
 The following is the program output after execution:
 
-![Output Question 4](/ProgramingTask/week9/images/questionSC1.png)
+![Output Question 4](/week9/images/questionSC1.png)
 
 ---
 
@@ -175,7 +175,7 @@ public class SiakadWhile20 {
 
 The following is the program output after execution:
 
-![Output Percobaan 2](/ProgramingTask/week9/images/SC2.png)
+![Output Percobaan 2](/week9/images/SC2.png)
 
 #### 2.2.3 Output Parameter Test Table
 
@@ -248,7 +248,7 @@ public class SiakadWhile20Modifed {
 
 The following is the program output after execution:
 
-![Output Question 4](/ProgramingTask/week9/images/questionSC2.png)
+![Output Question 4](/week9/images/questionSC2.png)
 
 ---
 
@@ -300,7 +300,7 @@ public class CafeDoWhile20 {
 
 The following is the program output after execution:
 
-![Output Percobaan 3](/ProgramingTask/week9/images/SC3.png)
+![Output Percobaan 3](/week9/images/SC3.png)
 
 #### 2.3.3 Answers to Questions / Reflection Questions
 
@@ -323,6 +323,7 @@ The following is the program output after execution:
 The following is the list of independent assignments for Jobsheet 7. Adjust the assignment titles and content according to the original jobsheet instructions.
 
 **Assignment 1:** Cinema Ticket Sales Calculator.
+
 **Assignment 2:** Parking Fee Calculator.
 
 ### 3.1 Assignment 1 Code Implementation
@@ -379,7 +380,7 @@ public class Assignment1 {
 
 #### 3.1.1 Program Output / Screenshot
 
-![Output Assignment 1](/ProgramingTask/week9/images/assignment1.png)
+![Output Assignment 1](/week9/images/assignment1.png)
 
 ### 3.2 Assignment 2 Code Implementation
 
@@ -429,7 +430,7 @@ public class Assignment2 {
 
 #### 3.2.1 Program Output / Screenshot
 
-![Output Assignment 2](/ProgramingTask/week9/images/assignment2.png)
+![Output Assignment 2](/week9/images/assignment2.png)
 
 ---
 
