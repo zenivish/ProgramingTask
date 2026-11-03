@@ -32,12 +32,7 @@ This experiment creates a GitHub repository, clones it to the computer using VS 
 
 #### 2.1.2 Setup Evidence / Screenshot
 
-<!--
-Insert a screenshot showing the repository on GitHub and/or the cloned repository in VS Code.
-Suggested filename: images/experiment1.png
--->
-
-![Repository Setup Screenshot](images/experiment1.png)
+![Repository Setup Screenshot](/week7/images/RepoGithub.png)
 
 #### 2.1.3 Setup Notes
 
@@ -96,13 +91,7 @@ public class StudiKasus120 {
 
 #### 2.2.2 Program Output / Screenshot
 
-<!--
-Run the Java program and insert a screenshot of its output here.
-Include an example that qualifies for the discount and, if possible, one that does not.
-Suggested filename: images/experiment2.png
--->
-
-![Case Study 1 Output](images/experiment2.png)
+![Case Study 1 Output](/week7/images/CS2.png)
 
 #### 2.2.3 Answers to Questions / Reflection Questions
 
@@ -213,13 +202,7 @@ public class StudiKasus220 {
 
 #### 2.3.2 Program Output / Screenshot
 
-<!--
-Run the program and insert a screenshot showing the result.
-Try to include different branches such as eligible, not eligible, and incomplete documents.
-Suggested filename: images/experiment3.png
--->
-
-![Case Study 2 Output](images/experiment3.png)
+![Case Study 2 Output](/week7/images/CS2.png)
 
 #### 2.3.3 Answers to Questions / Reflection Questions
 
@@ -298,7 +281,7 @@ Do not claim a test passed unless you have run it and checked the output.
 
 #### 2.4.4 Collaboration Notes
 
-* **Classmate's name:** [Fill in]
+* **Classmate's name:** [Muhamad Dzaky Ammar Naufal]
 * **Classmate's GitHub username:** [Fill in]
 * **Classmate's repository URL:** [Paste URL]
 * **Commit message used for test results:** `Test results for SK2 by [Name]`
