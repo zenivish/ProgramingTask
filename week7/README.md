@@ -1,4 +1,4 @@
-# JOBSHEET 7 - LOOPS
+# JOBSHEET 6 - CASE STUDY: SELECTION STRUCTURES WITH GIT AND GITHUB
 
 **Student Information:**
 
@@ -12,427 +12,350 @@
 
 The objectives of this practical session are:
 
-1. Students are able to understand the basic concepts of loops in Java.
-2. Students are able to use `for` and `do-while` loops to process data repeatedly.
-3. Students are able to use `break` to stop a loop and `continue` to skip the remaining statements in a particular iteration.
-4. Students are able to analyze the execution flow of loop programs based on given conditions.
+1. Students are able to solve case studies using basic and nested selection structures.
+2. Students are able to save and submit their work using Git and GitHub through Visual Studio Code.
+3. Students are able to collaborate with classmates using GitHub.
 
 ---
 
 ## 2: EXPERIMENT RESULTS AND ANALYSIS
 
-### 2.1 Experiment 1: Using a `for` Loop
+### 2.1 Experiment 1: Setting Up a Repository
 
-This experiment covers the use of a `for` loop and value processing to determine the highest and lowest values. A `for` loop uses initialization, a condition, and an update to the counter.
+This experiment creates a GitHub repository, clones it to the computer using VS Code, and saves student identity information in a README file.
 
-#### 2.1.1 Java Program Code
+#### 2.1.1 Repository Information
 
-```java
-package week9;
-import java.util.Scanner;
-public class SiakadFor20 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
+* **Repository name:** `ProgramingTask`
+* **Visibility:** Public
+* **Repository URL:** https://github.com/zenivish/ProgramingTask
 
-        Double score, highest = 0.0, lowest = 100.0;
+#### 2.1.2 Setup Evidence / Screenshot
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Enter score for student " + i + ": ");
-            score = sc.nextDouble();
+<!--
+Insert a screenshot showing the repository on GitHub and/or the cloned repository in VS Code.
+Suggested filename: images/experiment1.png
+-->
 
-            if (score > highest) {
-                highest = score;
-            }
-            if (score < lowest) {
-                lowest = score;
-            }
-        }
+![Repository Setup Screenshot](images/experiment1.png)
 
-        System.out.println("Highest score: " + highest);
-        System.out.println("Lowest score: " + lowest);
+#### 2.1.3 Setup Notes
 
-        sc.close();
-    }    
-}
-
-```
-
-#### 2.1.2 Program Output / Screenshot
-
-The following is the program output after execution:
-
-![Output experiment 1](/Week9/images/SC1.png)
-
-#### 2.1.3 Answers to Questions / Reflection Questions
-
-* **Question 1:** What are the functions of initialization, condition, and update in a `for` loop?
-  * **Answer:** Initialization (`int i = 1`) sets the counter `i` to an initial value of 1. The condition (`i <= 10`) keeps the loop running while `i` is less than or equal to 10. The update (`i++`) increases `i` by 1 after each iteration.
-
-* **Question 2:** Why are the `highest` and `lowest` variables initialized with those values?
-  * **Answer:** `highest` starts at 0 so a valid value can replace it when that value is higher. `lowest` starts at 100 so a valid value can replace it when that value is lower. If the initial values were reversed, the highest value could remain 100 and the lowest value could remain 0 even when those values do not match the input data.
-
-* **Question 3:** What is the purpose and workflow of the code used to determine the highest and lowest values?
-  * **Answer:** The program compares each new value with `highest` and `lowest`. If the new value is greater than `highest`, the `highest` value is updated. If the new value is less than `lowest`, the `lowest` value is updated.
-
-* **Question 4:** What should be done for the modified program?
-  * **Answer:**
-
-```java
-package week9;
-import java.util.Scanner;
-public class SiakadFor20Modifed {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        double score, highest = 0.0, lowest = 100.0;
-        int passCount = 0;
-        int failCount = 0;
-        
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Enter score for student " + i + ": ");
-            score = sc.nextDouble();
-            
-            if (score > highest) {
-                highest = score;
-            }
-            if (score < lowest) {
-                lowest = score;
-            }
-            
-            if (score >= 60) {
-                passCount++;
-            } else {
-                failCount++;
-            }
-        }
-        
-        System.out.println("Highest score: " + highest);
-        System.out.println("Lowest score: " + lowest);
-        System.out.println("Number of students who pass: " + passCount);
-        System.out.println("Number of students who fail: " + failCount);
-        
-        sc.close();
-    }
-}
-```
-
-The following is the program output after execution:
-
-![Output Question 4](/Week9/images/questionSC1.png)
+* Git identity (`user.name` and `user.email`) was configured in VS Code terminal.
+* The repository was cloned from GitHub.
+* A README file containing student identity information was created, committed, and pushed.
 
 ---
 
-### 2.2 Experiment 2: Using `continue` in a Loop
+### 2.2 Experiment 2: Case Study 1 – Basic Selection
 
-This experiment covers value validation and the use of `continue`. If a value is outside the range of 0 to 100, the program skips the remaining statements in that iteration and continues to the next iteration.
+Senja Coffee Shop sells Palm Sugar Milk Coffee for Rp18,000 per cup. A 10% discount is given when the purchase total is at least Rp100,000. The cashier program calculates the purchase total, discount, payment, and change.
 
 #### 2.2.1 Java Program Code
 
 ```java
-package week9;
 import java.util.Scanner;
-public class SiakadWhile20 {
+
+public class StudiKasus120 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        int score, studentCount, i = 0;
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Input your student number :");
-        studentCount = sc.nextInt();
+        final int HARGA_KOPI = 18000;
+        int jumlah;
+        int total;
+        double diskon = 0;
+        double totalBayar;
+        double uangBayar;
+        double kembalian;
 
-        while (i < studentCount) {
-            System.out.print("Enter score for student " + (i + 1) + " :" );
-            score = sc.nextInt();
+        System.out.print("Jumlah kopi yang dibeli: ");
+        jumlah = input.nextInt();
 
-            if (score < 0 || score > 100) {
-                System.out.println("Invalid score. Please enter a valid score!");
-                continue;
-            }
-            if (score > 80 && score <= 100) {
-                System.out.println("The grade of student " + (i + 1) + " is A");
-                } else if (score > 73 && score <= 80) {
-                    System.out.println("The grade of student " + (i + 1) + " is B+");
-                } else if (score > 65 && score <= 73) {
-                    System.out.println("The grade of student " + (i + 1) + " is B");
-                } else if (score > 60 && score <= 65) {
-                    System.out.println("The grade of student " + (i + 1) + " is C+");
-                } else if (score > 50 && score <= 60) {
-                    System.out.println("The grade of student " + (i + 1) + " is C");
-                } else if (score > 39 && score <= 50) {
-                    System.out.println("The grade of student " + (i + 1) + " is D");
-                } else {
-                    System.out.println("The grade of student " + (i + 1) + " is E");
-            }
-             i++;
+        total = jumlah * HARGA_KOPI;
+
+        if (total >= 100000) {
+            diskon = total * 0.10;
         }
-        sc.close();
+
+        totalBayar = total - diskon;
+
+        System.out.println("Total harga: Rp" + total);
+        System.out.println("Diskon: Rp" + diskon);
+        System.out.println("Total pembayaran: Rp" + totalBayar);
+
+        System.out.print("Uang yang dibayarkan: Rp");
+        uangBayar = input.nextDouble();
+
+        kembalian = uangBayar - totalBayar;
+        System.out.println("Kembalian: Rp" + kembalian);
+
+        input.close();
     }
 }
-
 ```
 
 #### 2.2.2 Program Output / Screenshot
 
-The following is the program output after execution:
+<!--
+Run the Java program and insert a screenshot of its output here.
+Include an example that qualifies for the discount and, if possible, one that does not.
+Suggested filename: images/experiment2.png
+-->
 
-![Output Experiment 2](/Week9/images/SC2.png)
+![Case Study 1 Output](images/experiment2.png)
 
-#### 2.2.3 Output Parameter Test Table
+#### 2.2.3 Answers to Questions / Reflection Questions
 
-| No. | Input Parameter | Expected Output | Status |
-| :---: | :--- | :--- | :--- |
-| 1 | A value between 0 and 100 | The value is processed by the program | Valid |
-| 2 | A value below 0 | The iteration is skipped using `continue` | Invalid |
-| 3 | A value above 100 | The iteration is skipped using `continue` | Invalid |
+* **Question 1:** What is the purpose of the selection structure in this cashier program?
+  * **Answer:** The selection structure checks whether the purchase total reaches Rp100,000. If it does, the program applies a 10% discount; otherwise, no discount is applied.
 
-#### 2.2.4 Answers to Questions / Reflection Questions
+* **Question 2:** When is the discount applied?
+  * **Answer:** The discount is applied when the purchase total is at least Rp100,000, including exactly Rp100,000.
 
-* **Question 1:** What does the condition `score < 0 || score > 100` mean, and what is the purpose of `continue`?
-  * **Answer:** This condition checks whether the score is outside the range of 0–100. The `continue` statement skips the remaining statements in the current iteration and moves to the next iteration.
+* **Question 3:** What information is needed to calculate the change?
+  * **Answer:** The program needs the amount paid by the customer and the final payment after the discount. The change is the amount paid minus the final payment.
 
-* **Question 2:** Why is `i++` placed at the end? What might happen if it were placed at the beginning?
-  * **Answer:** When placed at the end, the student counter is updated after the current student’s score is processed. If placed at the beginning, a student number could be skipped or become inconsistent with the data being processed.
+#### 2.2.4 Git Commit Evidence
 
-* **Question 3:** How many times does the loop process data for 19 students?
-  * **Answer:** The program is intended to process 19 valid student score entries. Invalid scores skipped by `continue` are not counted as fully processed student entries. The actual number of iterations still depends on the program’s code structure.
+* **Commit 1:** `SK1: input and variable declaration`
+* **Commit 2:** `SK1: discount and change logic`
 
-* **Question 4:** What should be done for the modified program?
-  * **Answer:**
+<!--
+Insert a screenshot of the commit history or Source Control panel showing at least two clear commits.
+Suggested filename: images/experiment2_commits.png
+-->
 
-```java
-package week9;
-import java.util.Scanner;
-public class SiakadWhile20Modifed {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        int score, studentCount, i = 0;
-        
-        System.out.print("Enter the number of students: ");
-        studentCount = sc.nextInt();
-        
-        while (i < studentCount) {
-            System.out.print("Enter score for student " + (i + 1) + ": ");
-            score = sc.nextInt();
-            
-            if (score < 0 || score > 100) {
-                System.out.println("Invalid score. Please enter a valid score!");
-                continue;
-            }
-            
-            if (score > 80 && score <= 100) {
-                System.out.println("The grade of student " + (i + 1) + " is A");
-                System.out.println("Well done, keep up the good work!");
-            } else if (score > 73 && score <= 80) {
-                System.out.println("The grade of student " + (i + 1) + " is B+");
-            } else if (score > 65 && score <= 73) {
-                System.out.println("The grade of student " + (i + 1) + " is B");
-            } else if (score > 60 && score <= 65) {
-                System.out.println("The grade of student " + (i + 1) + " is C+");
-            } else if (score > 50 && score <= 60) {
-                System.out.println("The grade of student " + (i + 1) + " is C");
-            } else if (score > 39 && score <= 50) {
-                System.out.println("The grade of student " + (i + 1) + " is D");
-            } else {
-                System.out.println("The grade of student " + (i + 1) + " is E");
-            }
-            
-            i++;
-        }
-        
-        sc.close();
-    }
-}
-
-```
-
-The following is the program output after execution:
-
-![Output Question 4](/Week9/images/questionSC2.png)
+![Case Study 1 Commit Evidence](images/experiment2_commits.png)
 
 ---
 
-### 2.3 Experiment 3: Using `do-while` and `break`
+### 2.3 Experiment 3: Case Study 2 – Nested Selection
 
-This experiment covers a loop that accepts customer names and stops when the user enters `cancel`. The `break` statement is used to exit the loop.
+This program checks whether a student is eligible to receive award funds. Eligibility depends on the activity type, competition rank or PKM funding status, and whether all four required documents have been uploaded.
+
+The four required documents are the Assignment Letter, Certificate, Activity Photo, and Activity Poster. If an otherwise eligible student has fewer than four documents, the award is not given and the program reports the number of missing documents.
 
 #### 2.3.1 Java Program Code
 
 ```java
-package week9;
 import java.util.Scanner;
-public class CafeDoWhile20 {
+
+public class StudiKasus220 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        int coffee, tea, bread, totalPrice;
-        int coffeePrice = 12000, teaPrice = 7000, breadPrice = 20000;
-        String customerName;
+        String nama;
+        String jenisKegiatan;
+        int jumlahDokumen;
+        int peringkat = 0;
+        int statusPKM = 0;
+        int dokumenKurang;
+        boolean memenuhiSyarat = false;
+        String alasan;
 
-        do {
-            System.out.print("Enter customer name (type 'cancel' to exit): ");
-            customerName = sc.nextLine();
-            if (customerName.equalsIgnoreCase("cancel")) {
-                System.out.println("Transaction canceled.");
-                break;
-            } 
-            System.out.print("Coffee quantity: ");
-            coffee = sc.nextInt();
-            System.out.print("Tea quantity: ");
-            tea = sc.nextInt();
-            System.out.print("Bread quantity: ");
-            bread = sc.nextInt();
+        System.out.print("Nama mahasiswa: ");
+        nama = input.nextLine();
 
-            totalPrice = (coffee * coffeePrice) + (tea * teaPrice) + (bread * breadPrice);
-            System.out.println("Total amount to pay: Rp " + totalPrice);
-            sc.nextLine();
-        } while (true);
-        System.out.println("All transactions completed.");
+        System.out.print("Jenis kegiatan (BELMAWA/BAKORMA/Mandiri/PKM/Lainnya): ");
+        jenisKegiatan = input.nextLine().trim().toLowerCase();
 
-        sc.close();
+        if (jenisKegiatan.equals("belmawa")
+                || jenisKegiatan.equals("bakorma")
+                || jenisKegiatan.equals("mandiri")) {
+            System.out.print("Peringkat (1, 2, 3; 0 jika bukan juara): ");
+            peringkat = input.nextInt();
+
+            if (peringkat >= 1 && peringkat <= 3) {
+                memenuhiSyarat = true;
+                alasan = "Memenuhi syarat peringkat kompetisi.";
+            } else {
+                alasan = "Tidak memenuhi syarat: hanya juara 1, 2, atau 3.";
+            }
+
+        } else if (jenisKegiatan.equals("pkm")) {
+            System.out.print("Status pendanaan PKM (1 = disetujui, 0 = tidak): ");
+            statusPKM = input.nextInt();
+
+            if (statusPKM == 1) {
+                memenuhiSyarat = true;
+                alasan = "Proposal PKM disetujui untuk pendanaan.";
+            } else {
+                alasan = "Proposal PKM tidak disetujui untuk pendanaan.";
+            }
+
+        } else {
+            alasan = "Jenis kegiatan tidak termasuk dalam ketentuan.";
+        }
+
+        if (memenuhiSyarat) {
+            System.out.print("Jumlah dokumen yang diunggah (0-4): ");
+            jumlahDokumen = input.nextInt();
+
+            if (jumlahDokumen >= 4) {
+                System.out.println("Status: Berhak menerima dana penghargaan.");
+                System.out.println("Alasan: " + alasan);
+            } else {
+                dokumenKurang = 4 - jumlahDokumen;
+                System.out.println("Status: Tidak berhak menerima dana penghargaan.");
+                System.out.println("Alasan: Dokumen belum lengkap.");
+                System.out.println("Dokumen yang masih kurang: " + dokumenKurang);
+            }
+        } else {
+            System.out.println("Status: Tidak berhak menerima dana penghargaan.");
+            System.out.println("Alasan: " + alasan);
+        }
+
+        System.out.println("Nama mahasiswa: " + nama);
+        input.close();
     }
-    
 }
-
 ```
 
 #### 2.3.2 Program Output / Screenshot
 
-The following is the program output after execution:
+<!--
+Run the program and insert a screenshot showing the result.
+Try to include different branches such as eligible, not eligible, and incomplete documents.
+Suggested filename: images/experiment3.png
+-->
 
-![Output Percobaan 3](/Week9/images/SC3.png)
+![Case Study 2 Output](images/experiment3.png)
 
 #### 2.3.3 Answers to Questions / Reflection Questions
 
-* **Question 1:** What happens when the input `cancel` is entered?
-  * **Answer:** The program reads the input and checks the stopping condition. When the user enters `cancel`, the loop stops.
+* **Question 1:** Which competition ranks qualify for award funds?
+  * **Answer:** Only 1st, 2nd, and 3rd place qualify. Honorable Mention and regular participation do not qualify.
 
-* **Question 2:** What condition stops the loop?
-  * **Answer:** The condition is `customerName.equalsIgnoreCase("cancel")`. It recognizes the word `cancel` regardless of uppercase or lowercase letters, after which the program executes `break`.
+* **Question 2:** What is the requirement for a PKM team to qualify?
+  * **Answer:** The PKM proposal must be approved for funding.
 
-* **Question 3:** What is the purpose of `true` in the loop condition?
-  * **Answer:** The `true` condition makes the loop continue running until it is explicitly stopped, for example by using `break`.
+* **Question 3:** What happens when fewer than four required documents are uploaded?
+  * **Answer:** The documents are considered incomplete, no award funds are given, and the program reports how many documents are missing.
 
-* **Question 4:** Why can a loop run without initialization and update components like those in a `for` loop?
-  * **Answer:** In a `do-while` loop, the program block runs before the condition is checked. The loop flow can be controlled from inside the block, including by using `break`.
+* **Question 4:** How many documents are required, and what are they?
+  * **Answer:** Four documents are required: Assignment Letter, Certificate, Activity Photo, and Activity Poster.
 
----
+* **Question 5:** Why should the program ask only for the data needed for each activity type?
+  * **Answer:** It avoids asking irrelevant questions. Competition activities need a rank, PKM needs a funding status, and other activities need neither.
 
-## 3: INDEPENDENT ASSIGNMENTS
+#### 2.3.4 Git Commit Evidence
 
-The following is the list of independent assignments for Jobsheet 7. Adjust the assignment titles and content according to the original jobsheet instructions.
+* **Commit 1:** `SK2: competition branch`
+* **Commit 2:** `SK2: PKM and other branches`
 
-**Assignment 1:** Cinema Ticket Sales Calculator.
-**Assignment 2:** Parking Fee Calculator.
+<!--
+Insert a screenshot showing at least two meaningful commits for Case Study 2.
+Suggested filename: images/experiment3_commits.png
+-->
 
-### 3.1 Assignment 1 Code Implementation
-
-```java
-package week9;
-import java.util.Scanner;
-public class Assignment1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        int ticketPrice = 50000;
-        int totalTicketSold = 0;
-        double totalRevenue = 0;
-
-        while (true) {
-            System.out.print("Enter number ticket purchased (type 0 to finish) :");
-            int quantity = sc.nextInt();
-
-            if (quantity ==  0) {
-                break;
-            }
-            if (quantity < 0) {
-                System.out.println("Invalid input number");
-            }
-
-            double subtotal = quantity*ticketPrice;
-            double discount = 0;
-
-            if (quantity > 4 ) {
-                discount = 0.1;    
-            } else if (quantity > 10) {
-                discount = 0.15;
-            }
-
-            double finalPrice = subtotal - (subtotal * discount);
-            totalTicketSold += quantity;
-            totalRevenue += finalPrice;
-
-            System.out.println("Subtotal after discount: Rp " + finalPrice);
-            System.out.println("----------------------------------------");
-        }
-
-        System.out.println("\n -- Today's Sales Report -- ");
-        System.out.println("Total tickets sold : " + totalTicketSold);
-        System.out.println("Total revenue      : Rp " + totalRevenue);
-        
-        sc.close();
-
-    }
-}
-
-```
-
-#### 3.1.1 Program Output / Screenshot
-
-![Output Assignment 1](/Week9/images/assignment1.png)
-
-### 3.2 Assignment 2 Code Implementation
-
-```java
-package week9;
-import java.util.Scanner;
-public class Assignment2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
-
-        int type, duration;
-        int total = 0;
-        
-        do {
-            System.out.println("\n--- Parking Menu ---");
-            System.out.println("1. Car (Rp 3,000 / hour)");
-            System.out.println("2. Motorcycle (Rp 2,000 / hour)");
-            System.out.println("0. Exit");
-            System.out.print("Enter vehicle type (1/2/0): ");
-            type = sc.nextInt();
-            
-            if (type == 0) {
-                break;
-            }
-            
-            if (type == 1 || type == 2) {
-                System.out.print("Enter parking duration (hours): ");
-                duration = sc.nextInt();
-                
-                if (type == 1) {
-                    total += duration * 3000;
-                } else {
-                    total += duration * 2000;
-                }
-            } else {
-                System.out.println("Invalid choice! Please choose 1, 2, or 0.");
-            }
-            
-        } while (type != 0);
-        
-        System.out.println("\nTotal overall parking fee: Rp " + total);
-        sc.close();
-    }
-}
-
-```
-
-#### 3.2.1 Program Output / Screenshot
-
-![Output Assignment 2](/Week9/images/assignment2.png)
+![Case Study 2 Commit Evidence](images/experiment3_commits.png)
 
 ---
 
-## 4: CONCLUSION
+### 2.4 Experiment 4: Cross-Testing a Classmate's Program
 
-This practical session covered the use of loops to process input repeatedly. A `for` loop uses initialization, a condition, and an update; `continue` skips the remaining statements in a particular iteration; and `break` stops a loop when the specified condition is met. Understanding these structures helps students control the flow of Java programs more effectively.
+This activity is completed in pairs. One student tests the other student's Case Study 2 program, and then the students switch roles. The repository owner adds the classmate as a collaborator. The invited student accepts the invitation, clones the repository, runs at least three test cases, and records the results in the repository README.
+
+#### 2.4.1 Cross-Testing Evidence / Screenshot
+
+<!--
+This activity requires another student's GitHub account and repository access.
+After completing the collaboration steps, insert screenshots showing the collaborator invitation,
+the test run, and/or the commit history.
+Suggested filename: images/experiment4.png
+-->
+
+![Cross-Testing Evidence](images/experiment4.png)
+
+#### 2.4.2 Test Results
+
+<!--
+Replace the sample rows below with the actual results from testing your classmate's program.
+Do not claim a test passed unless you have run it and checked the output.
+-->
+
+**Test Results for Case Study 2 by [Classmate Name]**
+
+| No. | Activity Type | Documents | Rank / Funding | Actual Output | Correct? |
+|---:|---|---:|---|---|---|
+| 1 | BAKORMA | 3 | Rank 1 | [Enter observed output] | [Yes/No] |
+| 2 | Mandiri | 4 | Rank 0 | [Enter observed output] | [Yes/No] |
+| 3 | PKM | 4 | Approved (1) | [Enter observed output] | [Yes/No] |
+| 4 | Lainnya | 4 | Not requested | [Enter observed output] | [Yes/No] |
+
+#### 2.4.3 Cross-Testing Procedure
+
+1. The repository owner opens the repository on GitHub and goes to **Settings → Collaborators**.
+2. The owner adds the classmate using their GitHub username.
+3. The invited student accepts the invitation sent by GitHub.
+4. The invited student copies the repository HTTPS URL and clones it in VS Code.
+5. Before editing, the invited student uses **Pull** to get the latest version.
+6. The invited student runs `StudiKasus2<NoPresensi>.java` using at least three test cases.
+7. The test results are added to the bottom of the repository's `README.md`.
+8. The invited student stages the changes, commits with a clear message, and pushes them to GitHub.
+9. The repository owner pulls the changes and checks the test results.
+10. The owner checks the repository's **Commits** page to verify that the classmate's commit appears.
+
+#### 2.4.4 Collaboration Notes
+
+* **Classmate's name:** [Fill in]
+* **Classmate's GitHub username:** [Fill in]
+* **Classmate's repository URL:** [Paste URL]
+* **Commit message used for test results:** `Test results for SK2 by [Name]`
+
+---
+
+## 3: CONCLUSION
+
+In this jobsheet, I practiced using basic and nested selection structures in Java to solve case studies. The first case study applies a conditional discount and calculates the final payment and change. The second case study uses nested IF statements to determine award eligibility based on activity type, competition rank or PKM funding status, and document completeness.
+
+I also practiced using Git and GitHub through VS Code to create a repository, clone it, stage changes, commit versions, and push work to GitHub. Through cross-testing, I learned how repository collaboration allows classmates to test each other's programs and share test results. The collaboration and screenshot sections must be completed using actual repository activity and evidence.
+
+---
+
+## APPENDIX: GITHUB COLLABORATION GUIDE
+
+### A. Add a Classmate as a Collaborator (Repository Owner)
+
+1. Open your repository on GitHub.
+2. Select **Settings**.
+3. Open **Collaborators** (the menu wording may vary slightly).
+4. Click **Add people**.
+5. Enter your classmate's GitHub username and send the invitation.
+6. Ask your classmate to accept the invitation from GitHub/email.
+
+### B. Accept the Invitation and Clone (Invited Student)
+
+1. Open the GitHub invitation and click **Accept invitation**.
+2. Open the repository shared by your classmate.
+3. Click **Code → HTTPS → Copy URL**.
+4. Open VS Code and choose **Clone Git Repository**.
+5. Paste the copied URL, select a destination folder, and open the cloned repository.
+6. If prompted, select **Yes, I trust the authors**.
+
+### C. Run the Program and Record Tests
+
+1. Open `StudiKasus2<NoPresensi>.java`.
+2. Run the program using at least three different test cases.
+3. Compare each actual output with the expected result.
+4. Add the test table in section 2.4.2 to the bottom of the repository's README.
+5. Save the file.
+
+### D. Commit and Push the Test Results in VS Code
+
+1. Open **Source Control** in the left sidebar.
+2. Click the **+** beside `README.md` to stage the change.
+3. Enter a commit message, for example: `Test results for SK2 by Wisnu`.
+4. Click **Commit**.
+5. Click **... → Push**, or **Sync Changes** if available.
+6. Tell the repository owner that the test results have been pushed.
+
+### E. Pull the Classmate's Changes (Repository Owner)
+
+1. Open your repository in VS Code.
+2. Click **... → Pull** in Source Control, or use **Sync Changes**.
+3. Open `README.md` and confirm the test results are present.
+4. Check the **Commits** page on GitHub to verify the classmate's commit.
+5. If a test reveals an error, fix the program, commit the correction, and push it.
+
+**Important:** Always pull before editing a shared repository. If both people edit the same README before pulling, Git may report a merge conflict. If a conflict appears, keep the required information from both versions, save the resolved file, then commit and push the resolution.
