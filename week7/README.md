@@ -109,12 +109,8 @@ public class StudiKasus120 {
 * **Commit 1:** `SK1: input and variable declaration`
 * **Commit 2:** `SK1: discount and change logic`
 
-<!--
-Insert a screenshot of the commit history or Source Control panel showing at least two clear commits.
-Suggested filename: images/experiment2_commits.png
--->
-
-![Case Study 1 Commit Evidence](images/experiment2_commits.png)
+![Case Study 1 Commit Evidence](/week7/images/CS1C1.png)
+![Case Study 1 Commit Evidence](/week7/images/SC1C2.png)
 
 ---
 
