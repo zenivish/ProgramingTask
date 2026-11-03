@@ -28,7 +28,7 @@ This experiment creates a GitHub repository, clones it to the computer using VS 
 
 * **Repository name:** `ProgramingTask`
 * **Visibility:** Public
-* **Repository URL:** https://github.com/zenivish/ProgramingTask
+* **Repository URL:** [https://github.com/zenivish/ProgramingTask]
 
 #### 2.1.2 Setup Evidence / Screenshot
 

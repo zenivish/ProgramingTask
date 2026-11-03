@@ -28,7 +28,23 @@ This experiment reviews the use of a `for` loop to print characters horizontally
 #### 2.1.1 Java Program Code
 
 ```java
-// Insert your Java program code here
+package week10;
+import java.util.Scanner;
+public class Star20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of n = ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("*");
+        }
+
+        System.out.println();
+        sc.close();
+    }
+}
 ```
 
 #### 2.1.2 Program Output / Screenshot
@@ -60,7 +76,28 @@ This experiment uses nested `for` loops to print a rectangle of stars. The outer
 #### 2.2.1 Java Program Code
 
 ```java
-// Insert your Java program code here
+package week10;
+import java.util.Scanner;
+public class Rectangle20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows: ");
+        int rows = sc.nextInt();
+
+        System.out.print("Enter the number of columns: ");
+        int columns = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
 ```
 
 #### 2.2.2 Program Output / Screenshot
@@ -144,7 +181,73 @@ This experiment uses nested loops to calculate each group's average score and de
 #### 2.4.1 Java Program Code
 
 ```java
-// Insert your Java program code here
+package week10;
+import java.util.Scanner;
+public class GroupScore20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of groups : ");
+        int numGroups = sc.nextInt();
+
+        System.out.print("Enter the number of graders: ");
+        int numGraders = sc.nextInt();
+
+        if (numGroups <= 0 || numGraders <= 0) {
+            System.out.println("Groups and graders must be > 0.");
+        } else {
+            int groupNo = 1;
+            double highestAverage = -1;
+            int bestGroup = 0;
+
+            while (groupNo <= numGroups) {
+                System.out.println("Group " + groupNo);
+
+                double totalScore = 0;
+
+                for (int j = 1; j <= numGraders; j++) {
+                    int score;
+
+                    do {
+                        System.out.print(
+                            " Score from Grader " + j + ": "
+                        );
+
+                        score = sc.nextInt();
+
+                        if (score < 0 || score > 100) {
+                            System.out.println(
+                                " Score must be 0-100. Retry!"
+                            );
+                        }
+                    } while (score < 0 || score > 100);
+
+                    totalScore += score;
+                }
+
+                double averageScore = totalScore / numGraders;
+
+                System.out.println(
+                    "Group " + groupNo
+                    + ": average score = " + averageScore
+                );
+
+                if (averageScore > highestAverage) {
+                    highestAverage = averageScore;
+                    bestGroup = groupNo;
+                }
+
+                groupNo++;
+            }
+
+            System.out.println("==============================");
+            System.out.println("Best group          : " + bestGroup);
+            System.out.println("Highest average     : " + highestAverage);
+        }
+
+        sc.close();
+    }
+}
 ```
 
 #### 2.4.2 Program Output / Screenshot
@@ -183,7 +286,33 @@ The program prints a number pattern from 1 up to the row number and displays the
 #### 3.1.1 Java Program Code
 
 ```java
-// Insert your Java program code here
+package week10;
+import java.util.Scanner;
+public class Assignment1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of n = ");
+        int n = sc.nextInt();
+
+        int totalNumbers = 0;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+                totalNumbers++;
+            }
+
+            System.out.println();
+        }
+
+        System.out.println(
+            "Total numbers printed: " + totalNumbers
+        );
+
+        sc.close();
+    }
+}
 ```
 
 #### 3.1.2 Program Output / Screenshot
@@ -199,7 +328,34 @@ The program displays an `n × n` multiplication table and calculates the sum of 
 #### 3.2.1 Java Program Code
 
 ```java
-// Insert your Java program code here
+package week10;
+import java.util.Scanner;
+public class Assignment2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of n = ");
+        int n = sc.nextInt();
+
+        int total = 0;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                int result = i * j;
+
+                System.out.printf("%4d", result);
+
+                total += result;
+            }
+
+            System.out.println();
+        }
+
+        System.out.println("Total of all numbers: " + total);
+
+        sc.close();
+    }
+}
 ```
 
 #### 3.2.2 Program Output / Screenshot
@@ -215,7 +371,91 @@ The program calculates the number of customers and total items for each store, t
 #### 3.3.1 Java Program Code
 
 ```java
-// Insert your Java program code here
+package week10;
+import java.util.Scanner;
+public class Assignment3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of stores: ");
+        int numStores = sc.nextInt();
+
+        if (numStores < 1) {
+            System.out.println(
+                "The number of stores must be at least 1."
+            );
+        } else {
+            int totalItemsAllStores = 0;
+            int storeNo = 1;
+
+            int bestStore = 1;
+            int highestItems = -1;
+
+            while (storeNo <= numStores) {
+                System.out.println("Store " + storeNo);
+
+                System.out.print(
+                    "Enter the number of customers: "
+                );
+                int numCustomers = sc.nextInt();
+
+                if (numCustomers < 0) {
+                    System.out.println(
+                        "Number of customers cannot be negative."
+                    );
+                } else {
+                    int totalItemsStore = 0;
+
+                    for (int i = 1; i <= numCustomers; i++) {
+                        System.out.print(
+                            "Enter items bought by customer "
+                            + i + ": "
+                        );
+
+                        int items = sc.nextInt();
+
+                        if (items < 0) {
+                            System.out.println(
+                                "Items cannot be negative."
+                            );
+
+                            i--;
+                        } else {
+                            totalItemsStore += items;
+                        }
+                    }
+
+                    System.out.println(
+                        "Store " + storeNo
+                        + " - customers: " + numCustomers
+                        + ", total items: " + totalItemsStore
+                    );
+
+                    totalItemsAllStores += totalItemsStore;
+
+                    if (totalItemsStore > highestItems) {
+                        highestItems = totalItemsStore;
+                        bestStore = storeNo;
+                    }
+                }
+
+                storeNo++;
+            }
+
+            System.out.println(
+                "Total items across all stores: "
+                + totalItemsAllStores
+            );
+
+            System.out.println(
+                "Store with the most items: "
+                + bestStore
+            );
+        }
+
+        sc.close();
+    }
+}
 ```
 
 #### 3.3.2 Program Output / Screenshot
