@@ -110,7 +110,7 @@ public class StudiKasus120 {
 * **Commit 2:** `SK1: discount and change logic`
 
 ![Case Study 1 Commit Evidence](/week7/images/CS1C1.png)
-![Case Study 1 Commit Evidence](/week7/images/SC1C2.png)
+![Case Study 1 Commit Evidence](/week7/images/CS1C2.png)
 
 ---
 
@@ -222,12 +222,8 @@ public class StudiKasus220 {
 * **Commit 1:** `SK2: competition branch`
 * **Commit 2:** `SK2: PKM and other branches`
 
-<!--
-Insert a screenshot showing at least two meaningful commits for Case Study 2.
-Suggested filename: images/experiment3_commits.png
--->
-
-![Case Study 2 Commit Evidence](images/experiment3_commits.png)
+![Case Study 2 Commit Evidence](/week7/images/CS2C1.png)
+![Case Study 2 Commit Evidence](/week7/images/CS2C2.png)
 
 ---
 
@@ -253,7 +249,7 @@ Replace the sample rows below with the actual results from testing your classmat
 Do not claim a test passed unless you have run it and checked the output.
 -->
 
-**Test Results for Case Study 2 by [Classmate Name]**
+**Test Results for Case Study 2 by [Naufal]**
 
 | No. | Activity Type | Documents | Rank / Funding | Actual Output | Correct? |
 |---:|---|---:|---|---|---|
