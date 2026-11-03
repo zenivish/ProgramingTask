@@ -1,4 +1,4 @@
-package ProgramingTask.week7;
+package week7;
 import java.util.Scanner;
 
 public class StudiKasus120 {
@@ -36,4 +36,4 @@ public class StudiKasus120 {
 
         input.close();
     }
-}
+}      
