@@ -51,7 +51,7 @@ public class Star20 {
 
 The following is the program output after execution:
 
-![Output Experiment 1](images/experiment1.png)
+![Output Experiment 1](/week10/images/CS1.png)
 
 #### 2.1.3 Answers to Questions / Reflection Questions
 
@@ -104,7 +104,7 @@ public class Rectangle20 {
 
 The following is the program output after execution:
 
-![Output Experiment 2](images/experiment2.png)
+![Output Experiment 2](/week10/images/CS2.png)
 
 #### 2.2.3 Answers to Questions / Reflection Questions
 
@@ -151,7 +151,7 @@ public class Rectangle20Modifed {
 
 #### 2.2.5 Modified Program Output / Screenshot
 
-![Modified Output Experiment 2](images/experiment2_modified.png)
+![Modified Output Experiment 2](/week10/images/CS2M.png)
 
 ---
 
@@ -210,7 +210,7 @@ public class Triangle20 {
 
 The following is the program output after execution:
 
-![Output Experiment 3](images/experiment3.png)
+![Output Experiment 3](/week10/images/CS3.png)
 
 #### 2.3.3 Answers to Questions / Reflection Questions
 
@@ -265,7 +265,7 @@ public class Triangle20Modifed {
 
 #### 2.3.5 Modified Program Output / Screenshot
 
-![Modified Output Experiment 3](images/experiment3_modified.png)
+![Modified Output Experiment 3](/week10/images/CS3M.png)
 
 ---
 
@@ -349,7 +349,7 @@ public class GroupScore20 {
 
 The following is the program output after execution:
 
-![Output Experiment 4](images/experiment4.png)
+![Output Experiment 4](/week10/images/CS4.png)
 
 #### 2.4.3 Answers to Questions / Reflection Questions
 
@@ -412,7 +412,7 @@ public class Assignment1 {
 
 #### 3.1.2 Program Output / Screenshot
 
-![Output Assignment 1](images/assignment1.png)
+![Output Assignment 1](/week10/images/Assignment1.png)
 
 ---
 
@@ -455,7 +455,7 @@ public class Assignment2 {
 
 #### 3.2.2 Program Output / Screenshot
 
-![Output Assignment 2](images/assignment2.png)
+![Output Assignment 2](/week10/images/Assignment2.png)
 
 ---
 
@@ -555,7 +555,7 @@ public class Assignment3 {
 
 #### 3.3.2 Program Output / Screenshot
 
-![Output Assignment 3](images/assignment3.png)
+![Output Assignment 3](/week10/images/Assignment3.png)
 
 ---
 
