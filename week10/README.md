@@ -126,7 +126,27 @@ The following is the program output after execution:
 #### 2.2.4 Modified Program Code
 
 ```java
-// Insert your modified Java program code here
+import java.util.Scanner;
+public class Rectangle20Modifed {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows: ");
+        int rows = sc.nextInt();
+
+        System.out.print("Enter the number of columns: ");
+        int columns = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
 ```
 
 #### 2.2.5 Modified Program Output / Screenshot
@@ -142,7 +162,48 @@ This experiment focuses on debugging a nested `while` loop to print a triangle p
 #### 2.3.1 Java Program Code
 
 ```java
-// Insert your corrected Java program code here
+package week10;
+import java.util.Scanner;
+public class Triangle20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of n = ");
+        int n = sc.nextInt();
+
+        int i = 1;
+
+        // Normal triangle
+        while (i <= n) {
+            int j = 0;
+
+            while (j < i) {
+                System.out.print("*");
+                j++;
+            }
+
+            System.out.println();
+            i++;
+        }
+
+        // Inverted triangle
+        i = n;
+
+        while (i >= 1) {
+            int j = 0;
+
+            while (j < i) {
+                System.out.print("*");
+                j++;
+            }
+
+            System.out.println();
+            i--;
+        }
+
+        sc.close();
+    }
+}
 ```
 
 #### 2.3.2 Program Output / Screenshot
@@ -165,7 +226,41 @@ The following is the program output after execution:
 #### 2.3.4 Modified Program Code (Normal and Inverted Triangle)
 
 ```java
-// Insert your modified Java program code here
+import java.util.Scanner;
+public class Triangle20Modifed {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of n = ");
+        int n = sc.nextInt();
+
+        // Normal triangle
+        int i = 1;
+        while (i <= n) {
+            int j = 0;
+            while (j < i) {
+                System.out.print("*");
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
+
+        // Inverted triangle
+        i = n;
+        while (i >= 1) {
+            int j = 0;
+            while (j < i) {
+                System.out.print("*");
+                j++;
+            }
+            System.out.println();
+            i--;
+        }
+
+        sc.close();
+    }
+}
 ```
 
 #### 2.3.5 Modified Program Output / Screenshot
